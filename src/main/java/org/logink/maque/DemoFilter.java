@@ -40,11 +40,12 @@ public class DemoFilter extends HttpServlet  implements Filter {
         HttpSession session = req.getSession(true);
         String username = (String) session.getAttribute("username");
         if (username == null || "".equals(username)) {
-            resp.setHeader("Cache-Control", "no-store");
-            resp.setDateHeader("Expires", 0);
-            resp.setHeader("Prama", "no-cache");
-            //此处设置了访问静态资源类
-            resp.sendRedirect(basePath+"/index.html");
+        	 filterChain.doFilter(req, resp);
+//            resp.setHeader("Cache-Control", "no-store");
+//            resp.setDateHeader("Expires", 0);
+//            resp.setHeader("Prama", "no-cache");
+//            //此处设置了访问静态资源类
+//            resp.sendRedirect(basePath+"/index.html");
         } else {
             // Filter 只是链式处理，请求依然转发到目的地址。 
             filterChain.doFilter(req, resp);
