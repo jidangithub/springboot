@@ -1,6 +1,7 @@
 package org.logink.maque;
 
-import org.springframework.web.bind.annotation.PathVariable;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController  
 @RequestMapping("/user")  
 public class UserController {  
+	private static final Logger LOGGER = LoggerFactory.getLogger(HelloApplication.class);
+	
     @RequestMapping("/hello")  
     public String hello() {  
-        
+    	LOGGER.info("hello() invoked - test ali arms");
         return "Hello World";  
     }  
   
