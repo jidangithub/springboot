@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jidan.cloud</groupId>
 	<artifactId>spring-boot</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -46,7 +46,11 @@
 <!-- 			<artifactId>arms-sdk</artifactId> -->
 <!-- 			<version>1.7.0</version> -->
 <!-- 		</dependency> -->
-
+		<dependency>
+			<groupId>org.logink.cloud</groupId>
+			<artifactId>logink-cloud-common</artifactId>
+			<version>0.0.8</version>
+		</dependency>
 	</dependencies>
 	<!-- 设置deploy地址 -->
 	<distributionManagement>
